@@ -12,6 +12,7 @@ namespace MovieSystem.Domain.Entites.Commen
         public  string?  Content { get; set; }
         public string? date { get; set; }
         public string? Rate { get; set; }
+        public bool? IsHaid { get; set; }
 
         //navigation property user to review
         public int Userid { get; set; }

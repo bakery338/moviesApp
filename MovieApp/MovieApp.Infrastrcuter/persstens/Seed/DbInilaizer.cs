@@ -70,14 +70,14 @@ namespace MovieSystem.Infrastructer.presistance.seading
             //=========================
             modelBuilder.Entity<Like>().ToTable("Likes")
                 .HasData(
-
+                  new Like { Id=1,Userid=1,Reviewid=1,IsLike=true}
                 );
             modelBuilder.Entity<Like>().HasKey(e => new { e.Id });
             //=========================
 
             modelBuilder.Entity<Review>().ToTable("Reviews")
                .HasData(
-                  new Review { Id=1,Content="review content",Userid=1,Movieid=1}
+                  new Review { Id=1,Content="review content",Userid=1,Movieid=1,IsHaid=false}
                );
             modelBuilder.Entity<Review>().HasKey(e => new { e.Id });
            //=========================

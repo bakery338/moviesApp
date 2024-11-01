@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MovieSystem.Domain.Entites.ApplicationContext;
 
@@ -11,9 +12,11 @@ using MovieSystem.Domain.Entites.ApplicationContext;
 namespace MovieApp.Infrastrcuter.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20241101193829_addreview")]
+    partial class addreview
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -81,15 +84,6 @@ namespace MovieApp.Infrastrcuter.Migrations
                     b.HasIndex("Userid");
 
                     b.ToTable("Likes", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            IsLike = true,
-                            Reviewid = 1,
-                            Userid = 1
-                        });
                 });
 
             modelBuilder.Entity("MovieSystem.Domain.Entites.Commen.Movie", b =>
@@ -211,7 +205,6 @@ namespace MovieApp.Infrastrcuter.Migrations
                         {
                             Id = 1,
                             Content = "review content",
-                            IsHaid = false,
                             Movieid = 1,
                             Userid = 1
                         });
