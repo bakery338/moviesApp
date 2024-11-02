@@ -2,6 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Graph;
 using Microsoft.Graph.Models;
+using MovieApp.Application.Repositry.Interfac;
+using MovieApp.Infrastrcuter.persstens.Repositery;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +16,8 @@ namespace MovieApp.Infrastrcuter.persstens.Configer
     {
         public static IServiceCollection AddInfrastarcterServices(this IServiceCollection service , IConfiguration configuration)
         {
+            service.AddScoped<ImovieRepostery,MovieRepositery>();
+
             return service;
         }
 

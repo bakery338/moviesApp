@@ -11,12 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Configer\contract\Interfac\" />
-    <Folder Include="Configer\contract\Servies\" />
     <Folder Include="Configer\Excepation\" />
     <Folder Include="Configer\valdation\" />
     <Folder Include="AutoMaper\" />
-    <Folder Include="DTO\" />
   </ItemGroup>
 
   <ItemGroup>

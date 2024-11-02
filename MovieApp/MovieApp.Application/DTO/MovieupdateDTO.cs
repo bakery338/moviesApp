@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MovieApp.Application.Repositry
+namespace MovieApp.Application.DTO
 {
-    internal class Interfaces
+    public class MovieupdateDTO
     {
     }
 }
